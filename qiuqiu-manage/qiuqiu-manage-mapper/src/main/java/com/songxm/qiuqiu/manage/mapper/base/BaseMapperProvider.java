@@ -1,12 +1,9 @@
 package com.songxm.qiuqiu.manage.mapper.base;
-
 import static org.apache.ibatis.jdbc.SqlBuilder.BEGIN;
 import static org.apache.ibatis.jdbc.SqlBuilder.DELETE_FROM;
 import static org.apache.ibatis.jdbc.SqlBuilder.SQL;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import org.apache.ibatis.mapping.MappedStatement;
 import org.apache.ibatis.mapping.ParameterMapping;
 import org.apache.ibatis.scripting.xmltags.ForEachSqlNode;

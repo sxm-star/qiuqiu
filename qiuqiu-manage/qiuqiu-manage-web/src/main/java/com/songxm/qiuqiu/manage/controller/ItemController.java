@@ -18,9 +18,6 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class ItemController {
 
-//    // 获取日志对象
-//    private static final log log = logFactory.getlog(ItemController.class);
-
     @Autowired
     private ItemService itemService;
 
