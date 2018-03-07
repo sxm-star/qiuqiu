@@ -1,7 +1,4 @@
 package com.songxm.qiuqiu.manage.controller;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,18 +7,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.github.pagehelper.PageInfo;
 import com.songxm.qiuqiu.common.bean.EUDataGridResult;
 import com.songxm.qiuqiu.manage.pojo.Item;
 import com.songxm.qiuqiu.manage.service.ItemService;
+import lombok.extern.slf4j.Slf4j;
 
 @RequestMapping("item")
 @Controller
+@Slf4j
 public class ItemController {
 
-    // 获取日志对象
-    private static final Logger LOGGER = LoggerFactory.getLogger(ItemController.class);
+//    // 获取日志对象
+//    private static final log log = logFactory.getlog(ItemController.class);
 
     @Autowired
     private ItemService itemService;
@@ -41,19 +39,19 @@ public class ItemController {
             @RequestParam(value = "page", defaultValue = "1") Integer page,
             @RequestParam(value = "rows", defaultValue = "30") Integer rows) {
         try {
-        	if(LOGGER.isDebugEnabled()){
+        	if(log.isDebugEnabled()){
         		//输出入参参数
-        		LOGGER.debug("分页查询商品数据,page={},rows={}",page,rows);
+        		log.debug("分页查询商品数据,page={},rows={}",page,rows);
         	}
             PageInfo<Item> pageInfo = this.itemService.queryListByPage2(page, rows);
             
-            if(LOGGER.isDebugEnabled()){
+            if(log.isDebugEnabled()){
             	//输出结果
-            	LOGGER.debug("分页查询商品数据，pageInfo = {}",pageInfo);
+            	log.debug("分页查询商品数据，pageInfo = {}",pageInfo);
             }
             return ResponseEntity.ok(new EUDataGridResult(pageInfo.getTotal(), pageInfo.getList()));
         } catch (Exception e) {
-           LOGGER.error("分页查询商品出错！{}",e);
+           log.error("分页查询商品出错！{}",e);
         }
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
     }
@@ -71,18 +69,18 @@ public class ItemController {
             @RequestParam("itemParams") String itemParams) {
         try {
 
-            if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("开始保存商品数据，传入的参数是： item = {}, desc = {}", item, desc);
+            if (log.isDebugEnabled()) {
+                log.debug("开始保存商品数据，传入的参数是： item = {}, desc = {}", item, desc);
             }
             this.itemService.saveItem(item, desc, itemParams);
-            if (LOGGER.isDebugEnabled()) {
-                LOGGER.debug("保存商品数据成功， itemId = {}", item.getId());
+            if (log.isDebugEnabled()) {
+                log.debug("保存商品数据成功， itemId = {}", item.getId());
             }
             // return ResponseEntity.status(HttpStatus.OK).build();
             return ResponseEntity.status(HttpStatus.CREATED).build();
         } catch (Exception e) {
-            if (LOGGER.isErrorEnabled()) {
-                LOGGER.error("保存商品数据出现异常！item = " + item, e);
+            if (log.isErrorEnabled()) {
+                log.error("保存商品数据出现异常！item = " + item, e);
             }
         }
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();

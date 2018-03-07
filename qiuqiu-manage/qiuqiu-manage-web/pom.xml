@@ -13,7 +13,6 @@
 		<dependency>
 			<groupId>com.songxm</groupId>
 			<artifactId>qiuqiu-common</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<!-- 加入service依赖 -->
 		<dependency>

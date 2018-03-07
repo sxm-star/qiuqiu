@@ -5,9 +5,7 @@
     <artifactId>qiuqiu-parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.songxm</groupId>
   <artifactId>qiuqiu-manage</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
   	<module>qiuqiu-manage-pojo</module>
@@ -20,7 +18,6 @@
         <dependency>
          <groupId>com.songxm</groupId>
 	     <artifactId>qiuqiu-common</artifactId>
-	     <version>1.0.0-SNAPSHOT</version>
         </dependency>
 		<!-- 单元测试 -->
 		<dependency>
@@ -30,10 +27,10 @@
 		</dependency>
 
 		<!-- 日志 -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
-		</dependency>
+		</dependency> -->
 
 		<!-- Apache工具组件 -->
 		<dependency>
