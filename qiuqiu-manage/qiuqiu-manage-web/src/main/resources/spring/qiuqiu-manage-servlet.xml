@@ -9,7 +9,7 @@
 
 	<!-- 注解扫描 -->
 	<mvc:annotation-driven />
-    <mvc:default-servlet-handler />
+	<mvc:default-servlet-handler />
 	<!-- 配置controller扫描 -->
 	<context:component-scan base-package="com.songxm.qiuqiu.manage.controller" />
 
@@ -31,4 +31,6 @@
 		<property name="maxUploadSize" value="5000000" />
 	</bean>
 
+	<mvc:resources location="classpath:/META-INF/resources/" mapping="swagger-ui.html"/>
+	<mvc:resources location="classpath:/META-INF/resources/webjars/" mapping="/webjars/**"/>
 </beans>

@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.songxm.qiuqiu.manage.pojo.ItemCat;
 import com.songxm.qiuqiu.manage.service.ItemCatService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 @RequestMapping("item/cat")
 @Controller
+@Api("类目")
 public class ItemCatController {
 
 	@Autowired
@@ -21,6 +25,7 @@ public class ItemCatController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
+	@ApiOperation(value="商品分类查询",notes="Test")
 	public List<ItemCat> queryListItemCatByParentId(
 			@RequestParam(value = "id", defaultValue = "0") Long parentId) {
 	

@@ -58,7 +58,10 @@
 		<!-- 所有以rest开头的请求都进入springMVC -->
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/swagger-ui.html</url-pattern>
+    </servlet-mapping>
 	<welcome-file-list>
 		<welcome-file>to_index.jsp</welcome-file>
 	</welcome-file-list>
