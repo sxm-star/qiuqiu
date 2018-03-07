@@ -43,18 +43,18 @@
 
 	<!-- 加载springMVC -->
 	<servlet>
-		<servlet-name>taotao-manage</servlet-name>
+		<servlet-name>qiuqiu-manage</servlet-name>
 		<!-- 配置DispatcherServlet，springmvc入口 -->
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:spring/taotao-manage-servlet.xml</param-value>
+			<param-value>classpath:spring/qiuqiu-manage-servlet.xml</param-value>
 		</init-param>
 		<!-- 启动web容器就启动springMVC -->
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>taotao-manage</servlet-name>
+		<servlet-name>qiuqiu-manage</servlet-name>
 		<!-- 所有以rest开头的请求都进入springMVC -->
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>

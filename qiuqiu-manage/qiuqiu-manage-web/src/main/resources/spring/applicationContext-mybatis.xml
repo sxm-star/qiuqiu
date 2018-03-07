@@ -15,12 +15,12 @@
 		<!-- 加载mapper.xml -->
 		<!-- <property name="mapperLocations" value="classpath:mybatis/mappers/**/*.xml"></property> -->
 		<!-- 别名包 -->
-		<property name="typeAliasesPackage" value="com.taotao.manage.pojo"></property>
+		<property name="typeAliasesPackage" value="com.songxm.qiuqiu.manage.pojo"></property>
 	</bean>
 
 	<!-- 扫描Mapper -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.taotao.manage.mapper"></property>
+		<property name="basePackage" value="com.songxm.qiuqiu.manage.mapper"></property>
 	</bean>
 
 </beans>

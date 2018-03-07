@@ -6,16 +6,13 @@
 		<artifactId>qiuqiu-parent</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<groupId>com.songxm</groupId>
 	<artifactId>qiuqiu-common</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
 
 	<dependencies>
 		<!-- Jackson Json处理工具包 -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
-			<version>${jackson.version}</version>
 		</dependency>
 	</dependencies>
 </project>
