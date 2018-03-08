@@ -19,7 +19,7 @@ Date.prototype.format = function(format){
     return format; 
 };
 
-var TT = TAOTAO = {
+var TT = QIUQIU = {
 	// 编辑器参数
 	kingEditorParams : {
 		filePostName  : "uploadFile",  //上传文件名
